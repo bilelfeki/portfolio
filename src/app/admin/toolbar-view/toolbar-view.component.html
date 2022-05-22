@@ -1,0 +1,21 @@
+<mat-toolbar>
+    <a  mat-fab color="basic"   [routerLink]="['/home']">
+        <mat-icon  aria-hidden="false" aria-label="Example home icon">home</mat-icon>
+    </a>
+    <div  *ngIf="isNotLogged">
+        <a mat-button [routerLink]="['/Login']">Login</a>
+        <a mat-button [routerLink]="['/Logout']">Logout</a>
+    </div>
+
+    <div *ngIf="!isNotLogged">
+        <a mat-button [routerLink]="['/logout']">Logout</a>
+        <a mat-button [routerLink]="['/profile']">profile</a>
+        <a mat-button [routerLink]="['/experience']">Experience</a>
+        <a mat-button [routerLink]="['/erojects']">Projects</a>
+        <a mat-button [routerLink]="['/skills']">Skills</a>
+        <a mat-button [routerLink]="['/contact']">Contact</a>
+    </div>
+    
+
+</mat-toolbar>
+
