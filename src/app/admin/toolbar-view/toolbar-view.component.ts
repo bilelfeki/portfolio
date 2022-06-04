@@ -7,7 +7,7 @@ import { ToolbarService } from 'src/app/services';
 })
 export class ToolbarViewComponent implements OnInit {
   public isNotLogged:boolean;
-
+  public menuItem:string[]=["logout","profile","experience","erojects","skills","contact"]
   constructor(private toolbarService : ToolbarService) { 
     this.isNotLogged=!this.toolbarService.isauth() 
   }

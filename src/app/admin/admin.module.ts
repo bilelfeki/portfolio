@@ -10,7 +10,8 @@ import { ContactComponent } from './contact/contact.component';
 
 const routes:Route[]=[
   {path:'home',component:HomeComponent},
-  {path:'auth',component:AuthFormComponent}
+  {path:'auth',component:AuthFormComponent},
+  {path:'contact',component:ContactComponent}
 ]
 @NgModule({
   declarations: [
