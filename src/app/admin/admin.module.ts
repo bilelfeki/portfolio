@@ -8,6 +8,8 @@ import { AuthFormComponent } from './auth-form/auth-form.component';
 import { ContactComponent } from './contact/contact.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { ProfileComponent } from './profile/profile.component';
+import { ExperienceRowComponent } from './experience/experience-row/experience-row.component';
+import { ExperienceChoisesComponent } from './experience/experience-choises/experience-choises.component';
 
 
 const routes:Route[]=[
@@ -24,7 +26,9 @@ const routes:Route[]=[
     AuthFormComponent,
     ContactComponent,
     ExperienceComponent,
-    ProfileComponent
+    ProfileComponent,
+    ExperienceRowComponent,
+    ExperienceChoisesComponent
   ],
   imports: [
     MaterialModule,

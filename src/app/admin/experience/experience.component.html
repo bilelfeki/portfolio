@@ -1,1 +1,3 @@
-<p>experience works!</p>
+<div *ngFor="let x of experiences ">
+    <app-experience-row [data]="x" (editEmitter)="onEdit()"></app-experience-row>
+</div>
