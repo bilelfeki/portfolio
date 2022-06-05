@@ -1,3 +1,7 @@
-<div  *ngFor="let choice of choises">
-    <button>{{choice}}</button>
-</div>
+    <mat-select>
+        <mat-option  *ngFor="let choice of choises">
+          <p>
+            {{choice}}
+          </p>
+        </mat-option>
+    </mat-select>

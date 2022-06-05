@@ -1,3 +1,7 @@
 <div *ngFor="let x of experiences ">
-    <app-experience-row [data]="x" (editEmitter)="onEdit()"></app-experience-row>
+    <app-experience-row 
+    [name]="x.name" 
+    [description]="x.description"
+    [progress]="x.progress"
+     (editEmitter)="onEdit()"></app-experience-row>
 </div>

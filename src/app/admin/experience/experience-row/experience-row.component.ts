@@ -7,7 +7,10 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class ExperienceRowComponent implements OnInit {
   @Output() editEmitter =new EventEmitter()
-  @Input() data:string="" ; 
+  @Input() name:string="" ; 
+  @Input() description="" ;
+  @Input() progress=0 ;
+
   constructor() { }
 
   ngOnInit(): void {
