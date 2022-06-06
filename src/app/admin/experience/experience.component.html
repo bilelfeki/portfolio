@@ -1,9 +1,9 @@
 <div *ngFor="let x of experiences ">
+
     <app-experience-row 
-    [name]="x.name" 
-    [description]="x.description"
-    [progress]="x.progress"
-    [githubLink]="x.githubLink"
+    [companyName]="x.companyName"
+    [dateDeb]="x.dateDeb"
+    [dateFin]="x.dateFin"
     (action)="performAction($event,x.id)"
      (editEmitter)="onEdit()"></app-experience-row>
 </div>

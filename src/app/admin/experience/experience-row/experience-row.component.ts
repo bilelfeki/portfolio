@@ -5,13 +5,14 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   templateUrl: './experience-row.component.html',
   styleUrls: ['./experience-row.component.scss']
 })
+
 export class ExperienceRowComponent implements OnInit {
   @Output() action=new EventEmitter<string>()
   @Output() editEmitter =new EventEmitter()
-  @Input() name:string="" ; 
-  @Input() description="" ;
-  @Input() progress=0 ;
-  @Input() githubLink="";
+  @Input() companyName:string="" ; 
+  @Input() dateDeb="" ;
+  @Input() dateFin="" ;
+ 
   constructor() { }
 
   ngOnInit(): void {

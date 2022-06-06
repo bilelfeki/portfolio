@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Experience } from 'src/app/interfaces/experience';
 import { Project } from 'src/app/interfaces/project';
 
 @Component({
@@ -8,21 +9,20 @@ import { Project } from 'src/app/interfaces/project';
   styleUrls: ['./experience.component.scss']
 })
 export class ExperienceComponent implements OnInit {
-  experiences:Project[]=[
+  experiences:Experience[]=[
     {
       id:1,
-      progress:20,
-      githubLink:"github.com/bilelfeki" ,
-      name:"portfolio",
-      description:"this my new project"
+      companyName:"vermeg", 
+      dateDeb:"04-01-2018" ,
+      dateFin:"05-602020" 
   
   },
   {
-    id:2,
-    progress:80,
-    githubLink:"github.com/bilelfeki" ,
-    name:"drive 2.0",
-    description:"this my new project"
+    id:1,
+    companyName:"vermeg", 
+    dateDeb:"04-01-2018" ,
+    dateFin:"05-602020" 
+
 }
   ]; 
   constructor() { }

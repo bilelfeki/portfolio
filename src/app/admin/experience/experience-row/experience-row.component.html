@@ -3,12 +3,12 @@
             <div class="level1">
                 <app-experience-choises (action)="delegateAction($event)"></app-experience-choises>
                 <div style="height:50px; width: 500px"></div>
-                <mat-progress-bar  mode="determinate" value={{progress}}></mat-progress-bar>
             </div>
         
             <div class="level2">
-                <p>{{name}}</p>
-                <p>{{description}}</p>
+                <p>{{companyName}}</p>
+                <p>{{dateDeb}}</p>
+                <p>{{dateFin}}</p>
             </div>
     </div>
     <div class="level3">
@@ -17,16 +17,6 @@
                 <mat-icon aria-hidden="false" aria-label="Example home icon">edit</mat-icon>
                 edit
             </button>
-            
-        
-        <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-        
-        <button mat-button color="primary">
-            <mat-icon aria-hidden="false" aria-label="Example home icon">visibility</mat-icon>
-            view
-        </button>
-
-    
     </div>
     </mat-card>
     <div style="height:50px; width:100%"></div>
