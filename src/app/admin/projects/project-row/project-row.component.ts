@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-project-row',
@@ -7,14 +8,13 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class ProjectRowComponent implements OnInit {
 
-  
     @Output() action=new EventEmitter<string>()
     @Output() editEmitter =new EventEmitter()
     @Input() name:string="" ; 
     @Input() description="" ;
     @Input() progress=0 ;
     @Input() githubLink="";
-    constructor() { }
+    constructor(private route:Router) { }
   
     ngOnInit(): void {
     }
@@ -27,5 +27,7 @@ export class ProjectRowComponent implements OnInit {
     delegateAction(action:string){
       this.action.emit(action)
     }
-
+    goToGithub(){
+  
+    }
 }

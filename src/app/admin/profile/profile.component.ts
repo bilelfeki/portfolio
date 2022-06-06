@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Profile } from 'src/app/interfaces/profile';
 
 @Component({
   selector: 'app-profile',
@@ -6,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./profile.component.scss']
 })
 export class ProfileComponent implements OnInit {
+  profile :Profile={
+    imageUrl:"https://material.angular.io/assets/img/examples/shiba2.jpg",
+    firstName:"First Name",
+    lastName:"Last Name ",
+    description:"This is a fake description"
+  }
   url="https://material.angular.io/assets/img/examples/shiba2.jpg"
   description="desc"
   constructor() {}

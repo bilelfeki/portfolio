@@ -1,8 +1,8 @@
 <mat-card class="example-card">
     <mat-card-header>  
-        <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title>Bile Feki</mat-card-title>
-     <mat-card-subtitle>bilel feki</mat-card-subtitle>
+        <div  mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{profile.firstName}}</mat-card-title>
+     <mat-card-subtitle>{{profile.firstName}}</mat-card-subtitle>
     </mat-card-header>
     
     <mat-card-header>
@@ -10,7 +10,7 @@
     
     <mat-card-content>
       <p>
-        {{description}}
+        {{profile.description}}
     </p>
     </mat-card-content>
     <mat-card-actions>
