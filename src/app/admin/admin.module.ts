@@ -10,6 +10,7 @@ import { ExperienceComponent } from './experience/experience.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ExperienceRowComponent } from './experience/experience-row/experience-row.component';
 import { ExperienceChoisesComponent } from './experience/experience-choises/experience-choises.component';
+import { ProjectComponent } from './project/project.component';
 
 
 const routes:Route[]=[
@@ -17,7 +18,9 @@ const routes:Route[]=[
   {path:'auth',component:AuthFormComponent},
   {path:'contact',component:ContactComponent},
   {path:'experience',component:ExperienceComponent},
+  {path:'profile',component:ProfileComponent},
   {path:'profile',component:ProfileComponent}
+  
 ]
 @NgModule({
   declarations: [
@@ -28,7 +31,8 @@ const routes:Route[]=[
     ExperienceComponent,
     ProfileComponent,
     ExperienceRowComponent,
-    ExperienceChoisesComponent
+    ExperienceChoisesComponent,
+    ProjectComponent
   ],
   imports: [
     MaterialModule,
