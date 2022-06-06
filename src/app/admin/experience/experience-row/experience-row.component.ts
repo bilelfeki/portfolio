@@ -10,6 +10,7 @@ export class ExperienceRowComponent implements OnInit {
   @Input() name:string="" ; 
   @Input() description="" ;
   @Input() progress=0 ;
+  @Input() githubLink="";
 
   constructor() { }
 
@@ -18,4 +19,6 @@ export class ExperienceRowComponent implements OnInit {
   public edit():void{
     this.editEmitter.emit()
   }
+  
+
 }

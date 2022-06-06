@@ -19,8 +19,8 @@ const routes:Route[]=[
   {path:'contact',component:ContactComponent},
   {path:'experience',component:ExperienceComponent},
   {path:'profile',component:ProfileComponent},
-  {path:'profile',component:ProfileComponent}
-  
+  {path:'projects',component:ProjectComponent}
+
 ]
 @NgModule({
   declarations: [
@@ -31,8 +31,7 @@ const routes:Route[]=[
     ExperienceComponent,
     ProfileComponent,
     ExperienceRowComponent,
-    ExperienceChoisesComponent,
-    ProjectComponent
+    ExperienceChoisesComponent
   ],
   imports: [
     MaterialModule,

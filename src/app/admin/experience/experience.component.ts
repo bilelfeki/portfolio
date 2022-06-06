@@ -23,7 +23,6 @@ export class ExperienceComponent implements OnInit {
     githubLink:"github.com/bilelfeki" ,
     name:"drive 2.0",
     description:"this my new project"
-
 }
   ]; 
   constructor() { }
