@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-experience-choises',
@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./experience-choises.component.scss']
 })
 export class ExperienceChoisesComponent implements OnInit {
+  @Output() action = new EventEmitter<string>()
   choises=["delete","duplicate"]
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  choiceMethod(action:string){
+    this.action.emit(action)
+  }
 }

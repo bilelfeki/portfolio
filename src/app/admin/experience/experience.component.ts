@@ -18,7 +18,7 @@ export class ExperienceComponent implements OnInit {
   
   },
   {
-    id:1,
+    id:2,
     progress:80,
     githubLink:"github.com/bilelfeki" ,
     name:"drive 2.0",
@@ -31,5 +31,8 @@ export class ExperienceComponent implements OnInit {
   }
   onEdit(){
     console.log("ok")
+  }
+  performAction(action:string,id:number){
+    console.log(action,id)
   }
 }

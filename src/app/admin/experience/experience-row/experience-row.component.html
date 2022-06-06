@@ -1,7 +1,7 @@
 <mat-card>
     <div >
             <div class="level1">
-                <app-experience-choises></app-experience-choises>
+                <app-experience-choises (action)="delegateAction($event)"></app-experience-choises>
                 <div style="height:50px; width: 500px"></div>
                 <mat-progress-bar  mode="determinate" value={{progress}}></mat-progress-bar>
             </div>

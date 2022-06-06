@@ -22,5 +22,8 @@ export class ExperienceRowComponent implements OnInit {
   onAction(event:string){
     this.action.emit(event)
   }
+  delegateAction(action:string){
+    this.action.emit(action)
+  }
 
 }

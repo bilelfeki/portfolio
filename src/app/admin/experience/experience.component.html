@@ -4,6 +4,7 @@
     [description]="x.description"
     [progress]="x.progress"
     [githubLink]="x.githubLink"
+    (action)="performAction($event,x.id)"
      (editEmitter)="onEdit()"></app-experience-row>
 </div>
 

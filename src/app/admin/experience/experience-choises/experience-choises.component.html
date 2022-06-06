@@ -1,6 +1,6 @@
     <mat-select>
         <mat-option  *ngFor="let choice of choises">
-          <p>
+          <p (click)="choiceMethod(choice)">
             {{choice}}
           </p>
         </mat-option>
