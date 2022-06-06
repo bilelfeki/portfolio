@@ -10,8 +10,10 @@ import { ExperienceComponent } from './experience/experience.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ExperienceRowComponent } from './experience/experience-row/experience-row.component';
 import { ExperienceChoisesComponent } from './experience/experience-choises/experience-choises.component';
-import { ProjectComponent } from './project/project.component';
+import { ProjectsComponent } from './projects/projects.component';
 import { SkillsComponent } from './skills/skills.component';
+import { ProjectRowComponent } from './projects/project-row/project-row.component';
+import { ProjectChoisesComponent } from './projects/project-choises/project-choises.component';
 
 
 const routes:Route[]=[
@@ -20,7 +22,7 @@ const routes:Route[]=[
   {path:'contact',component:ContactComponent},
   {path:'experience',component:ExperienceComponent},
   {path:'profile',component:ProfileComponent},
-  {path:'projects',component:ProjectComponent},
+  {path:'projects',component:ProjectsComponent},
   {path:'skills',component:SkillsComponent}
 ]
 @NgModule({
@@ -32,7 +34,10 @@ const routes:Route[]=[
     ExperienceComponent,
     ProfileComponent,
     ExperienceRowComponent,
-    ExperienceChoisesComponent
+    ExperienceChoisesComponent,
+    ProjectsComponent,
+    ProjectRowComponent,
+    ProjectChoisesComponent
   ],
   imports: [
     MaterialModule,
