@@ -14,6 +14,7 @@ import { ProjectsComponent } from './projects/projects.component';
 import { SkillsComponent } from './skills/skills.component';
 import { ProjectRowComponent } from './projects/project-row/project-row.component';
 import { ProjectChoisesComponent } from './projects/project-choises/project-choises.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 const routes:Route[]=[
@@ -42,7 +43,8 @@ const routes:Route[]=[
   imports: [
     MaterialModule,
     CommonModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    HttpClientModule
   ],
   exports:[
     ToolbarViewComponent

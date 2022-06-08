@@ -12,19 +12,17 @@ export class ExperienceComponent implements OnInit {
   experiences:Experience[]=[
     {
       id:1,
-      companyName:"vermeg", 
+      companyName:"iNETUM", 
       dateDeb:"04-01-2018" ,
-      dateFin:"05-602020" 
-  
+      dateFin:"05-60-2020" 
   },
   {
     id:1,
-    companyName:"vermeg", 
+    companyName:"INETUM", 
     dateDeb:"04-01-2018" ,
     dateFin:"05-602020" 
-
 }
-  ]; 
+  ];
   constructor() { }
 
   ngOnInit(): void {
