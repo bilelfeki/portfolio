@@ -28,6 +28,6 @@ export class ProjectRowComponent implements OnInit {
       this.action.emit(action)
     }
     goToGithub(){
-  
+
     }
 }
