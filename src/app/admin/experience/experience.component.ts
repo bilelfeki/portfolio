@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Experience } from 'src/app/interfaces/experience';
-import { Project } from 'src/app/interfaces/project';
+import { ExperienceServiceService } from 'src/app/services/experience-service.service';
 
 @Component({
   selector: 'app-experience',
@@ -9,23 +9,13 @@ import { Project } from 'src/app/interfaces/project';
   styleUrls: ['./experience.component.scss']
 })
 export class ExperienceComponent implements OnInit {
-  experiences:Experience[]=[
-    {
-      id:1,
-      companyName:"iNETUM", 
-      dateDeb:"04-01-2018" ,
-      dateFin:"05-60-2020" 
-  },
-  {
-    id:1,
-    companyName:"INETUM", 
-    dateDeb:"04-01-2018" ,
-    dateFin:"05-602020" 
-}
-  ];
-  constructor() { }
+
+  experiences:Experience[]=[];
+  exp!:Experience
+  constructor(private expService:ExperienceServiceService) { }
 
   ngOnInit(): void {
+    this.getExperience()
   }
   onEdit(){
     console.log("ok")
@@ -33,4 +23,14 @@ export class ExperienceComponent implements OnInit {
   performAction(action:string,id:number){
     console.log(action,id)
   }
-}
+  getExperience(){
+    this.expService.getExperience().subscribe(
+      (data) => data.body?.forEach(exp=>this.experiences.push(exp))
+    )
+        
+        /* this.experiences= {...data.body!}
+        console.log(this.experiences) */
+        console.log(this.exp)
+      }
+    
+  }

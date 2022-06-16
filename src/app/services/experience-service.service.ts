@@ -10,11 +10,11 @@ export class ExperienceServiceService {
   /**
    * @returns Observable<HttpResponse<Experience>>
    * @param http HttpClient 
-   * response headers are accessible because of this 
+   * response headers are accessible because of this
    * option : HttpResponse<Experience>
    */
   constructor(private http:HttpClient) { }
-  getExperience():Observable<HttpResponse<Experience>>{
-    return this.http.get<HttpResponse<Experience>>(this.api)
+  getExperience():Observable<HttpResponse<Experience[]>>{
+    return this.http.get<Experience[]>(this.api,{ observe: 'response' })
   }
 }

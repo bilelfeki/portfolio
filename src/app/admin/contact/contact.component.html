@@ -3,6 +3,7 @@
       <mat-card-title>Contact Me</mat-card-title>
     </mat-card-header>
     <mat-card-content class="cardContent">
+        
         <div *ngFor="let item of ListContact ;let i=index">
             <div style="height:25px; width:100%"></div>
             <a  mat-mini-fab color="primary">
@@ -10,8 +11,10 @@
             </a>
             <label for=""> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
             <label for="">{{item}} </label>
-            <div style="height:25px; width:100%"></div>
-            <mat-divider></mat-divider>
+            <div *ngIf="i < ListContact.length-1">
+                <div style="height:18px; width:100%"></div>
+                <mat-divider></mat-divider>
+            </div>
         </div>
     </mat-card-content>
 

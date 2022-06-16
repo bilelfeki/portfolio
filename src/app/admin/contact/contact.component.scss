@@ -1,19 +1,29 @@
-/* .example-card{
+ .example-card{
     // background-image: url(../../../assets/tel.jfif);
     
-   
-    
-} */
+    box-shadow : 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+    width: 80%;
+    margin: 0 auto ;
+    margin-top: 50px;
+} 
+
 .cardContent{
+
     width: fit-content;
+    width: 80%;
     font-size: large;
+    
+}
+mat-card-title{
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
 }
 label{
-    color:rgb(33, 65, 171);
 }
 .cardContent div:hover{
     font-size: larger;
+    color:rgb(33, 65, 171);
 }
 mat-icon{
-    size: 20px;
+    size: 40px;
 }
