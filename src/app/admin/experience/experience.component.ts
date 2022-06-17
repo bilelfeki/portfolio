@@ -25,7 +25,8 @@ export class ExperienceComponent implements OnInit {
   }
   getExperience(){
     this.expService.getExperience().subscribe(
-      (data) => data.body?.forEach(exp=>this.experiences.push(exp))
+      (data) => data.body?.forEach(exp=>this.experiences.push(exp)),
+      erro=>console.log("ok")
     )
         
         /* this.experiences= {...data.body!}
