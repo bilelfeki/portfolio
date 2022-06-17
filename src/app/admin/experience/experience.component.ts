@@ -9,7 +9,7 @@ import { ExperienceServiceService } from 'src/app/services/experience-service.se
   styleUrls: ['./experience.component.scss']
 })
 export class ExperienceComponent implements OnInit {
-
+  name="bilelfeki"
   experiences:Experience[]=[];
   exp!:Experience
   constructor(private expService:ExperienceServiceService) { }
@@ -23,15 +23,9 @@ export class ExperienceComponent implements OnInit {
   performAction(action:string,id:number){
     console.log(action,id)
   }
+
   getExperience(){
     this.expService.getExperience().subscribe(
-      (data) => data.body?.forEach(exp=>this.experiences.push(exp)),
-      erro=>console.log("ok")
-    )
-        
-        /* this.experiences= {...data.body!}
-        console.log(this.experiences) */
-        console.log(this.exp)
-      }
-    
+      (data) => data.body?.forEach(exp=>this.experiences.push(exp))
+    )}
   }
