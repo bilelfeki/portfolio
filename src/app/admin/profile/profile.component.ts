@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Profile } from 'src/app/interfaces/profile';
+import { ProfileService } from 'src/app/services/profile.service';
 
 @Component({
   selector: 'app-profile',
@@ -15,8 +16,16 @@ export class ProfileComponent implements OnInit {
   }
   url="https://material.angular.io/assets/img/examples/shiba2.jpg"
   description="desc"
-  constructor() {}
+  constructor(private serv:ProfileService) {}
   ngOnInit(): void {
+   this.getProfile()
+  }
+  getProfile(){
+    this.serv.getProfile().subscribe(
+      profile=>{
+        this.profile.actualPosition=profile.actualPosition
+      }
+    )
   }
 
 }
