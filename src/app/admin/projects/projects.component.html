@@ -1,11 +1,14 @@
-<div *ngFor="let x of projects ">
-    <app-project-row 
-    [name]="x.name" 
-    [description]="x.description"
-    [progress]="x.progress"
-    [githubLink]="x.githubLink"
-    (action)="performAction($event,x.id)"
-     (editEmitter)="onEdit()"></app-project-row>
+<div class="project"
+>
+    <div  *ngFor="let x of projects ">
+        <app-project-row 
+        [name]="x.name" 
+        [description]="x.description"
+        [progress]="x.progress"
+        [githubLink]="x.githubLink"
+        (action)="performAction($event,x.id)"
+         (editEmitter)="onEdit()"></app-project-row>
+    </div>
 </div>
 
 <div>

@@ -1,5 +1,5 @@
 div{
-    max-width: 300px;
+    max-width: 500px;
     min-width: 50px;
     margin: 0 auto;
     text-align: center;
@@ -8,4 +8,8 @@ div{
 a{
     border-radius: 50px;
     margin-bottom: 200px;
+}
+
+@media (max-width: 1000px){
+
 }
