@@ -9,14 +9,13 @@ import { Profile } from 'src/app/interfaces/profile';
 export class ProfileComponent implements OnInit {
   profile :Profile={
     imageUrl:"https://material.angular.io/assets/img/examples/shiba2.jpg",
-    firstName:"First Name",
-    lastName:"Last Name ",
-    description:"This is a fake description"
+    fullName:"First Name",
+    actualPosition:"Student ",
+    description:"This is a fake description knlsdv qdlvblsjbvjnsjdv vikbsvlbsfeklvjsfe sbvkefbvlkesfklvb"
   }
   url="https://material.angular.io/assets/img/examples/shiba2.jpg"
   description="desc"
   constructor() {}
-
   ngOnInit(): void {
   }
 

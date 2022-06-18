@@ -15,6 +15,7 @@ import { SkillsComponent } from './skills/skills.component';
 import { ProjectRowComponent } from './projects/project-row/project-row.component';
 import { ProjectChoisesComponent } from './projects/project-choises/project-choises.component';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 const routes:Route[]=[
@@ -41,6 +42,7 @@ const routes:Route[]=[
     ProjectChoisesComponent
   ],
   imports: [
+    BrowserAnimationsModule,
     MaterialModule,
     CommonModule,
     RouterModule.forChild(routes),

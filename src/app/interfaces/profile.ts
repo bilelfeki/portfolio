@@ -1,6 +1,6 @@
 export interface Profile {
     imageUrl:string,
-    firstName:string,
-    lastName:string,
+    fullName:string,
+    actualPosition:string,
     description:string
 }
