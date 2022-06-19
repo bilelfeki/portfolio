@@ -16,6 +16,7 @@ import { ProjectRowComponent } from './projects/project-row/project-row.componen
 import { ProjectChoisesComponent } from './projects/project-choises/project-choises.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ProfileFormComponent } from './profile/profile-form/profile-form.component';
 
 
 const routes:Route[]=[
@@ -25,7 +26,10 @@ const routes:Route[]=[
   {path:'experience',component:ExperienceComponent},
   {path:'profile',component:ProfileComponent},
   {path:'projects',component:ProjectsComponent},
-  {path:'skills',component:SkillsComponent}
+  {path:'skills',component:SkillsComponent},
+  {path:'forms/profile',component:ProfileFormComponent}
+
+
 ]
 @NgModule({
   declarations: [
@@ -39,7 +43,8 @@ const routes:Route[]=[
     ExperienceChoisesComponent,
     ProjectsComponent,
     ProjectRowComponent,
-    ProjectChoisesComponent
+    ProjectChoisesComponent,
+    ProfileFormComponent
   ],
   imports: [
     BrowserAnimationsModule,
