@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ImageCroppedEvent } from 'ngx-image-cropper';
 
 @Component({
   selector: 'app-profile-form',
@@ -14,8 +15,11 @@ export class ProfileFormComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  uploadImage(event:Event){
+  uploadImage(event:any){
       this.imageChangedEvent=event ; 
-      console.log(event) ; 
+  }
+  imageCropped(event:ImageCroppedEvent){
+    this.croppedImage=event.base64
+    console.log(event)
   }
 }
