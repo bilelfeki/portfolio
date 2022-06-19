@@ -1,5 +1,6 @@
 <form >
     <fieldset [disabled]="false">
+
       <mat-form-field appearance="outline">
         <mat-label>NAME</mat-label>
         <input matInput type="text" placeholder="FULL NAME" formControlName="documentNumber" appOnlyDigits #dniElemRef>
@@ -9,6 +10,8 @@
         <mat-label>DESCRIPTION </mat-label>
         <textarea matInput placeholder="Textarea"></textarea>
     </mat-form-field>
+
+    
       <mat-form-field appearance="outline">
         <mat-label>POSITION</mat-label>
         <mat-select formControlName="role">
@@ -16,20 +19,25 @@
           <mat-option value="monitor">Engineer</mat-option>
         </mat-select>
       </mat-form-field>
-  
-      <input  type="file"  (change)="uploadImage($event)">
-      <mat-checkbox formControlName="rememberMe">Remenber me</mat-checkbox>
+      
+      <label> <span id="selectImage">Select Image</span>
+        <input style="display: none;" type="file" accept="image/*" (change)="uploadImage($event)"></label>
+       
+
+
       <image-cropper class="image"
-    [imageChangedEvent]="imageChangedEvent"
-    [maintainAspectRatio]="true"
-    [aspectRatio]="4 / 3"
-    format="png"
-    (imageCropped)="imageCropped($event)"
+        [imageChangedEvent]="imageChangedEvent"
+        [maintainAspectRatio]="true"
+        [aspectRatio]="4 / 3"
+        format="png"
+        (imageCropped)="imageCropped($event)"
     ></image-cropper>
+
+
     <img class="image" [src]="croppedImage">
       <div class="button-wrapper">
         <button type="reset" mat-raised-button>Reset</button>
-        <button type="submit" mat-raised-button color="primary" >Login</button>
+        <button type="submit" mat-raised-button color="primary" >Submit</button>
       </div>
     </fieldset>
   </form>
