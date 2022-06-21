@@ -1,12 +1,13 @@
-<div  *ngFor="let x of experiences " class="experience">
-
-    <app-experience-row 
-    [companyName]="x.companyName"
-    [dateDeb]="x.dateDeb"
-    [dateFin]="x.dateFin"
-    (action)="performAction($event,x.id)"
-     (editEmitter)="onEdit()">
-    </app-experience-row>
+<div class="experinces">
+    <div   *ngFor="let x of experiences " class="experience">
+        <app-experience-row 
+        [companyName]="x.companyName"
+        [dateDeb]="x.dateDeb"
+        [dateFin]="x.dateFin"
+        (action)="performAction($event,x.id)"
+         (editEmitter)="onEdit()">
+        </app-experience-row>
+    </div>
 </div>
 
 <div>

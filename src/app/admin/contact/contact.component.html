@@ -5,8 +5,10 @@
     <mat-card-content class="cardContent">
         
         <div *ngFor="let item of ListContact ;let i=index">
-            <div style="height:25px; width:100%"></div>
-            <a  mat-mini-fab color="primary">
+            <div  style="height:25px; width:100% ; "></div>
+            <a style=" background-color: #002864;
+                        margin-left:10px;" mat-mini-fab >
+                        
                 <mat-icon  [inline]="true" aria-hidden="false" aria-label="Example home icon">{{iconArray[i]}}</mat-icon>
             </a>
             <label for=""> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>

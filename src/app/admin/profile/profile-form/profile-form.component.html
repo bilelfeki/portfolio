@@ -1,47 +1,51 @@
-<form >
+<form [formGroup]="form" (ngSubmit)="onFormSubmit()" >
     <fieldset [disabled]="false">
 
-      <mat-form-field appearance="outline">
+    <mat-form-field appearance="outline">
         <mat-label>NAME</mat-label>
-        <input matInput type="text" placeholder="FULL NAME" formControlName="documentNumber" appOnlyDigits #dniElemRef>
-      </mat-form-field>
-  
-      <mat-form-field appearance="outline">
+        <input matInput id="last"  placeholder="FULL NAME" type="text" formControlName="fullName">
+
+
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
         <mat-label>DESCRIPTION </mat-label>
-        <textarea matInput placeholder="Textarea"></textarea>
+        <textarea matInput placeholder="Textarea" formControlName="descripion"></textarea>
     </mat-form-field>
 
     
-      <mat-form-field appearance="outline">
+    <mat-form-field appearance="outline">
         <mat-label>POSITION</mat-label>
-        <mat-select formControlName="role">
-          <mat-option value="admin">Student</mat-option>
-          <mat-option value="monitor">Engineer</mat-option>
+        <mat-select formControlName="position" >
+          <mat-option value="Student">Student</mat-option>
+          <mat-option value="Engineer">Engineer</mat-option>
         </mat-select>
-      </mat-form-field>
+    </mat-form-field>
       
-      <label> <span id="selectImage">Select Image</span>
-        <input style="display: none;" type="file" accept="image/*" (change)="uploadImage($event)"></label>
+    <label> <span id="selectImage">Select Image</span>
+        <input style="display: none;" type="file" accept="image/*" (change)="uploadImage($event)">
+    </label>
        
-
-
-      <image-cropper class="image"
+    <image-cropper class="image"
         [imageChangedEvent]="imageChangedEvent"
         [maintainAspectRatio]="true"
         [aspectRatio]="4 / 3"
         format="png"
         (imageCropped)="imageCropped($event)"
-    ></image-cropper>
+        (imageLoaded)="imageLoaded()">
+    </image-cropper>
 
 
     <img class="image" [src]="croppedImage">
       <div class="button-wrapper">
         <button type="reset" mat-raised-button>Reset</button>
-        <button type="submit" mat-raised-button color="primary" >Submit</button>
+        <button id="submit" type="submit" mat-raised-button color="primary" >Submit</button>
       </div>
     </fieldset>
   </form>
+
   <!-- [formGroup]="form" (ngSubmit)="onSubmit()"
             [disabled]="form.invalid"
 
  -->
+ <p>Form Value: {{ form.value | json }}</p>

@@ -16,7 +16,12 @@ export class ProfileService {
    * option : HttpResponse<Experience>
    */
   constructor(private http:HttpClient) { }
+  /**
+   *  get the profile from the server 
+   * @returns observable<profile>
+   */
   getProfile():Observable<Profile>{
     return this.http.get<Profile>(this.api)
   }
+  
 }

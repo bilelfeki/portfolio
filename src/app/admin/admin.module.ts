@@ -18,6 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProfileFormComponent } from './profile/profile-form/profile-form.component';
 import { ImageCropperModule } from 'ngx-image-cropper';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 const routes:Route[]=[
@@ -46,6 +47,7 @@ const routes:Route[]=[
     ProjectRowComponent,
     ProjectChoisesComponent,
     ProfileFormComponent,
+    
   ],
   imports: [
     BrowserAnimationsModule,
@@ -53,7 +55,8 @@ const routes:Route[]=[
     CommonModule,
     RouterModule.forChild(routes),
     HttpClientModule,
-    ImageCropperModule
+    ImageCropperModule,
+    ReactiveFormsModule
   ],
   exports:[
     ToolbarViewComponent
